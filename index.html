@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Nutrition</title>
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h2 class="title">Nutrition</h2>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>My patients</h2>
+				<label for="table-filter">Filter:</label>
+				<input type="text" name="filter" id="table-filter" placeholder="Type patient name">
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Weight(kg)</th>
+							<th>Height(m)</th>
+							<th>Fat(%)</th>
+							<th>BMI</th>
+						</tr>
+					</thead>
+					<tbody id="patients-table">
+						<tr class="patient" id="first-patient">
+							<td class="info-name">Marky</td>
+							<td class="info-weight">100</td>
+							<td class="info-height">2.00</td>
+							<td class="info-fat">10</td>
+							<td class="info-bmi">0</td>
+						</tr>
+
+						<tr class="patient" >
+							<td class="info-name">Joe</td>
+							<td class="info-weight">80</td>
+							<td class="info-height">1.72</td>
+							<td class="info-fat">40</td>
+							<td class="info-bmi">0</td>
+						</tr>
+
+						<tr class="patient" >
+							<td class="info-name">Joan</td>
+							<td class="info-weight">54</td>
+							<td class="info-height">1.64</td>
+							<td class="info-fat">14</td>
+							<td class="info-bmi">0</td>
+						</tr>
+
+						<tr class="patient">
+							<td class="info-name">Johnny</td>
+							<td class="info-weight">85</td>
+							<td class="info-height">1.73</td>
+							<td class="info-fat">24</td>
+							<td class="info-bmi">0</td>
+						</tr>
+
+						<tr class="patient" >
+							<td class="info-name">Kim</td>
+							<td class="info-weight">46</td>
+							<td class="info-height">1.55</td>
+							<td class="info-fat">19</td>
+							<td class="info-bmi">0</td>
+						</tr>
+					</tbody>
+				</table>
+				<span id="ajax-error" class="invisible">Error on search for patients</span>
+
+				<button id="search-patients" class="button main-button">Search patients</button>
+
+			</section>
+		</main>
+
+		<section class="container">
+		    <h2 id="form-title">Add patient</h2>
+			<ul id="error-messages"></ul>
+		    <form id="add-form">
+		        <div class="">
+		            <label for="name">Name:</label>
+		            <input id="name" name="name" type="text" placeholder="ex: John" class="field">
+		        </div>
+		        <div class="group">
+		            <label for="weight">Weight:</label>
+		            <input id="weight" name="weight" type="text" placeholder="ex: 75.42" class="field medium-field">
+		        </div>
+		        <div class="group">
+		            <label for="height">Height:</label>
+		            <input id="height" name="height" type="text" placeholder="ex: 1.70" class="field medium-field">
+		        </div>
+		        <div class="group">
+		            <label for="fat">Fat %:</label>
+		            <input id="fat" type="text" name="fat" placeholder="ex: 6" class="field medium-field">
+		        </div>
+
+		        <button id="add-patient" class="button main-button">Add</button>
+		    </form>
+		</section>
+
+		<script src="js/bmi-calculator.js" ></script>
+		<script src="js/form.js" ></script>
+		<script src="js/remove-patient.js" ></script>
+		<script src="js/filter.js" ></script>
+		<script src="js/search-patients.js" ></script>
+	</body>
+</html>
